@@ -1,0 +1,21 @@
+{
+  "name": "api-validation-framework",
+  "version": "1.0.0",
+  "description": "",  
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "gen-report": "npx cucumber-js test/features/featureFiles/*.feature --tags @report",
+    "test": "proxy=poke env=prd npx cucumber-js test/features/featureFiles/*.feature -f json:reports/report.json --tags @all"
+  },
+  "author": "Hitesh",
+  "license": "NONE",
+  "dependencies": {
+    "apickli": "^2.3.3",
+    "cucumber": "^5.1.0"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.2.0"
+  }
+}
